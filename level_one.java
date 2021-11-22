@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class level_one extends MyWorld
 {
-
+    private Rum rum;
+    private Keg keg;
     /**
      * Constructor for objects of class level_one.
      * 
@@ -18,25 +19,35 @@ public class level_one extends MyWorld
          
         setBackground("beach.jpg");
         
+        Pirate pirate = new Pirate();
+         addObject(pirate, 40, 344);
         
-        
-        
+        keg = new Keg();
+        addObject (keg, 9,154);
+         
         Platform platform = new Platform();
          addObject(platform, 23,390);
          
          Platform platform1 = new Platform();
          addObject(platform1,70, 390);
          
-         Pirate pirate = new Pirate();
-         addObject(pirate, 40, 344);
+         
          
          Crab crab = new Crab();
          addObject(crab,210, 90);
          
+         Bomb bomb = new Bomb();
+         addObject(bomb,559,37);
+         
+         addObject(new Platform(), 355, 272);
+         
+         addObject(new Platform(), 501, 193);
          
          addObject(new Platform(), 214, 330);
          
          addObject(new Platform(), 261, 330);
+         
+         addObject(new Platform(), 179, 330);
                   
          addObject(new Platform(), 388, 272);
          
@@ -50,9 +61,9 @@ public class level_one extends MyWorld
          
          addObject(new Platform(),388 ,123 ); 
          
-         addObject(new Platform(),576 ,48 );
+         addObject(new Platform(),23 ,187 );
          
-         addObject(new Platform(),529 ,48 ); 
+         addObject(new Platform(),65 ,187);
          
           
           

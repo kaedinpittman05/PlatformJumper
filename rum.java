@@ -1,30 +1,50 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 /**
- * Write a description of class rum here.
+ * Write a description of class Rum here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class rum extends goal 
+public class Rum extends Goal
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private int goal = 0;
+    private int start = 0;
+    private int level = 0;
+    
+    
     /**
-     * Constructor for objects of class rum
+     * Act - do whatever the Rum wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public rum()
+    public void act()
     {
+        goalCheck();
+        
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    
+    public void goalCheck()
     {
-        // put your code here
-        return x + y;
+        if(isTouching(Pirate.class))
+        {
+            goal++;
+            start++;
+            newWorld();
+        }
+    }
+    
+    public void newWorld()
+    {
+        if(goal == 0 && start < 0)
+        {
+            Greenfoot.setWorld(new level_zero());
+            
+        }
+        else if(goal == 1 && start == 1)
+        {
+            Greenfoot.setWorld(new level_one());
+            goal++;
+        }
+        
     }
 }

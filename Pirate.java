@@ -11,8 +11,15 @@ public class Pirate extends Actor
     private int speed = 5;
     private int vSpeed = 0;
     private int acceleration = 1;
-    private int jumpStrength= 15;
-   
+    private int jumpStrength= 13;
+    private int remove = 0;
+    
+    
+    
+     Pirate()
+    {
+        
+    }
     /**
      * Act - do whatever the Duke wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -21,7 +28,9 @@ public class Pirate extends Actor
     {
         checkKeys();
         checkFall();
-        touchingCrab();
+        touchingEnemie();
+        touchingBomb();
+        touchingGoal();
         water();
     }
     
@@ -55,6 +64,7 @@ public class Pirate extends Actor
     
     public void fall()
     {
+        detectPlatform();
         setLocation (getX() , getY() + vSpeed);
         vSpeed += acceleration;
     }
@@ -64,6 +74,19 @@ public class Pirate extends Actor
         Actor under = getOneObjectAtOffset(0,getImage().getHeight()/2,Platform.class);
         
         return under != null;
+    }
+    
+    public void detectPlatform()
+    {
+        for (int i= 0; i < vSpeed; i++)
+        {
+            Actor under = getOneObjectAtOffset(0,getImage().getHeight()/2,Platform.class);    
+            if (under != null)
+            {
+                vSpeed = i;
+            
+            }
+        }
     }
     
    
@@ -86,9 +109,19 @@ public class Pirate extends Actor
         fall();
     }
     
-    public void touchingCrab()
+    public void touchingEnemie()
     {
-        if(isTouching(Crab.class))
+        if(isTouching(Crab.class)  && remove != 1)
+        {
+            setLocation(40,344);
+        }
+        else if(isTouching(Crab.class) && remove == 1)
+        {
+            removeTouching(Crab.class);
+            remove--;
+        }
+        
+        if(isTouching(flying_fish.class))
         {
             setLocation(40,344);
         }
@@ -99,6 +132,23 @@ public class Pirate extends Actor
         if(getY() >= getWorld().getHeight()-1)
         {
             setLocation(40,344);
+        }
+    }
+    
+    public void touchingBomb()
+    {
+        if(isTouching(Bomb.class))
+        {
+            removeTouching(Bomb.class);
+            remove++;
+        }
+    }
+    
+    public void touchingGoal()
+    {
+        if(isTouching(Rum.class))
+        {
+            
         }
     }
 }

@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class flying_fish extends Actor
 {
-    private int dY=5;
+    private int dY=7;
     
     /**
      * Act - do whatever the flying_fish wants to do. This method is called whenever
@@ -27,7 +27,10 @@ public class flying_fish extends Actor
             setRotation(180);
             dY= -dY;
         }
-        
+        if(getY()<=0)
+        {
+            setRotation(0);
+        }
         
     }
     

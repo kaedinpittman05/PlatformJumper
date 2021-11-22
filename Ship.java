@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Keg here.
+ * Write a description of class Ship here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Keg extends Goal
+public class Ship extends Goal
 {
     private int goal = 0;
     private int start = 0;
@@ -34,7 +34,7 @@ public class Keg extends Goal
     {
         if(goal == 1 && start == 1)
         {
-            Greenfoot.setWorld(new Final_Level());
+            Greenfoot.setWorld(new The_End());
             
         }
     }
