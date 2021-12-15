@@ -20,6 +20,9 @@ public class Keg extends Goal
         goalCheck();
     }
     
+    /**
+     * checks to see if the player is touching the goal
+     */
     public void goalCheck()
     {
         if(isTouching(Pirate.class))
@@ -30,6 +33,9 @@ public class Keg extends Goal
         }
     }
     
+    /**
+     * moves the player to the next level
+     */
     public void newWorld()
     {
         if(goal == 1 && start == 1)

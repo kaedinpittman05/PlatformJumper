@@ -19,6 +19,8 @@ public class Final_Level extends MyWorld
         
         addObject(new Ship(), 538, 241);
         
+        addObject(new Fish(), 591,274);
+        
         Pirate pirate = new Pirate();
          addObject(pirate, 40, 344);
          

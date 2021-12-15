@@ -31,13 +31,13 @@ public class level_one extends MyWorld
          Platform platform1 = new Platform();
          addObject(platform1,70, 390);
          
-         
+         addObject(new Fish(),588,221);
          
          Crab crab = new Crab();
          addObject(crab,210, 90);
          
          Bomb bomb = new Bomb();
-         addObject(bomb,559,37);
+         addObject(bomb,427,31);
          
          addObject(new Platform(), 355, 272);
          

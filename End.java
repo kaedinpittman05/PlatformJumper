@@ -17,6 +17,9 @@ public class End extends Actor
         theEnd();
     }
     
+    /**
+     * sets the image for the end screen
+     */
     public void theEnd()
     {
         setImage("thanks_for_playing.jfif");

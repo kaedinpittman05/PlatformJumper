@@ -22,6 +22,9 @@ public class Crab extends Actor
         
     }
     
+    /**
+     * Checks to see if the crab is on the platform
+     */
     public boolean onGround()
     {
         Actor under = getOneObjectAtOffset(0,getImage().getHeight()/2,Platform.class);
@@ -29,6 +32,9 @@ public class Crab extends Actor
         return under != null;
     }
     
+    /**
+     * Checks where the crab is and makes it move
+     */
     public void checkMove()
     {
         if(onGround() && turn < 100 )

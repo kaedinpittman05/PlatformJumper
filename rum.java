@@ -23,6 +23,9 @@ public class Rum extends Goal
         
     }
     
+    /**
+     * checks to see if the player is touching the goal
+     */
     public void goalCheck()
     {
         if(isTouching(Pirate.class))
@@ -33,6 +36,9 @@ public class Rum extends Goal
         }
     }
     
+    /**
+     * moves the player to the next level
+     */
     public void newWorld()
     {
         if(goal == 0 && start < 0)

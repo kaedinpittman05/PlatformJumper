@@ -16,7 +16,7 @@ public class Pirate extends Actor
     
     
     
-     Pirate()
+     public Pirate()
     {
         
     }
@@ -30,10 +30,13 @@ public class Pirate extends Actor
         checkFall();
         touchingEnemie();
         touchingBomb();
-        touchingGoal();
+        
         water();
     }
     
+    /**
+     * Checks the user input to see where they move
+     */
     public void checkKeys()
     {
         if (Greenfoot.isKeyDown("right"))
@@ -52,16 +55,25 @@ public class Pirate extends Actor
         }
     }
     
+    /**
+     * makes the character move to the right
+     */
     public void moveRight()
     {
         setLocation (getX() + speed, getY());
     }
     
+    /**
+     * makes the character move to the left
+     */
     public void moveLeft()
     {
         setLocation (getX() - speed, getY());
     }
     
+    /**
+     * makes the character fall when not on a platform
+     */
     public void fall()
     {
         detectPlatform();
@@ -69,6 +81,9 @@ public class Pirate extends Actor
         vSpeed += acceleration;
     }
     
+    /**
+     * stops the character from falling through the platform
+     */
     public boolean onGround()
     {
         Actor under = getOneObjectAtOffset(0,getImage().getHeight()/2,Platform.class);
@@ -76,6 +91,9 @@ public class Pirate extends Actor
         return under != null;
     }
     
+    /**
+     * Checks to make sure the character is on the platform
+     */
     public void detectPlatform()
     {
         for (int i= 0; i < vSpeed; i++)
@@ -90,7 +108,9 @@ public class Pirate extends Actor
     }
     
    
-    
+    /**
+     * Checks to see if the character should fall
+     */
     public void checkFall()
     {
         if(onGround())
@@ -103,12 +123,18 @@ public class Pirate extends Actor
         }
     }
     
+    /**
+     * makes the character jump
+     */
     public void jump()
     {
         vSpeed= -jumpStrength;
         fall();
     }
     
+    /**
+     * Makes the character interact with the enemies
+     */
     public void touchingEnemie()
     {
         if(isTouching(Crab.class)  && remove != 1)
@@ -120,13 +146,17 @@ public class Pirate extends Actor
             removeTouching(Crab.class);
             remove--;
         }
-        
-        if(isTouching(flying_fish.class))
+        else if(isTouching(Fish.class) && remove != 1)
         {
             setLocation(40,344);
         }
+        
+        
     }
     
+    /**
+     * rests the character if they fall
+     */
     public void water()
     {
         if(getY() >= getWorld().getHeight()-1)
@@ -135,6 +165,9 @@ public class Pirate extends Actor
         }
     }
     
+    /**
+     * makes it so they can kill the enemie
+     */
     public void touchingBomb()
     {
         if(isTouching(Bomb.class))
@@ -144,11 +177,7 @@ public class Pirate extends Actor
         }
     }
     
-    public void touchingGoal()
-    {
-        if(isTouching(Rum.class))
-        {
-            
-        }
-    }
+    
+    
+    
 }

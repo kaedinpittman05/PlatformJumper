@@ -23,6 +23,8 @@ public class level_zero extends MyWorld
          Pirate pirate = new Pirate();
          addObject(pirate, 40, 344);
          
+         Fish fish = new Fish();
+         addObject(fish, 599,255);
         Platform platform = new Platform();
          addObject(platform, 23,390);
          
