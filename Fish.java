@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Fish extends Actor
 {
-    private int dX = 4;
+    private int dX = 3;
     
     /**
      * Act - do whatever the Fish wants to do. This method is called whenever
@@ -40,7 +40,7 @@ public class Fish extends Actor
         }
         else if (getX() >= 599)
         {
-            dX= 4;
+            dX= 3;
             setRotation(360);
         }
     }

@@ -24,6 +24,10 @@ public class level_one extends MyWorld
         
         keg = new Keg();
         addObject (keg, 9,154);
+        
+        addObject(new Portal(),548,311);
+        
+        addObject(new Platform(),546, 375);
          
         Platform platform = new Platform();
          addObject(platform, 23,390);

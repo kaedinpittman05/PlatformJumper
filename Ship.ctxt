@@ -9,5 +9,5 @@ comment2.target=void\ goalCheck()
 comment2.text=\r\n\ checks\ to\ see\ if\ the\ player\ is\ touching\ the\ goal\r\n
 comment3.params=
 comment3.target=void\ newWorld()
-comment3.text=\r\n\ moves\ the\ player\ to\ the\ next\ level\r\n
+comment3.text=\r\n\ ends\ the\ game\r\n
 numComments=4

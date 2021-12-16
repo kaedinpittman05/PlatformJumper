@@ -1,22 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Ship here.
+ * Write a description of class Shiggins here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Ship extends Goal
+public class Shiggins extends Goal
 {
+    private GifImage gifImage = new GifImage("Shiggins.gif");
     private int goal = 0;
     private int start = 0;
-    
     /**
-     * Act - do whatever the Keg wants to do. This method is called whenever
+     * Act - do whatever the Portal wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
+        setImage(gifImage.getCurrentImage());
         goalCheck();
     }
     
@@ -34,14 +35,15 @@ public class Ship extends Goal
     }
     
     /**
-     * ends the game
+     * moves the player to the next level
      */
     public void newWorld()
     {
         if(goal == 1 && start == 1)
         {
             Greenfoot.setWorld(new The_End());
-            
+            goal++;
         }
+        
     }
 }
