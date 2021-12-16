@@ -24,6 +24,10 @@ public class Secret_level extends MyWorld
         Pirate pirate = new Pirate();
          addObject(pirate, 40, 344);
          
+         addObject(new Bomb(),186,80);
+         
+         addObject(new Crab(),351,356);
+         
         Platform platform = new Platform();
          addObject(platform, 23,390);
          
@@ -51,5 +55,13 @@ public class Secret_level extends MyWorld
          addObject(new Platform(), 533,390);
          
          addObject(new Platform(), 581,390);
+         
+         addObject(new Platform(), 166,321);
+         
+         addObject(new Platform(), 266, 279);
+         
+         addObject(new Platform(), 337, 241);
+         
+         addObject(new Platform(), 261,152);
     }
 }
