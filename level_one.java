@@ -19,13 +19,7 @@ public class level_one extends MyWorld
          
         setBackground("beach.jpg");
         
-        Pirate pirate = new Pirate();
-         addObject(pirate, 40, 344);
         
-        keg = new Keg();
-        addObject (keg, 9,154);
-        
-        addObject(new Portal(),548,311);
         
         addObject(new Platform(),546, 375);
          
@@ -81,7 +75,13 @@ public class level_one extends MyWorld
          addObject(new Platform(),295 ,123 );
          
          
-         
+         Pirate pirate = new Pirate();
+         addObject(pirate, 40, 344);
+        
+        keg = new Keg();
+        addObject (keg, 9,154);
+        
+        addObject(new Portal(),548,311);
          
          
          

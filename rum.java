@@ -41,12 +41,7 @@ public class Rum extends Goal
      */
     public void newWorld()
     {
-        if(goal == 0 && start < 0)
-        {
-            Greenfoot.setWorld(new level_zero());
-            
-        }
-        else if(goal == 1 && start == 1)
+        if(goal == 1 && start == 1)
         {
             Greenfoot.setWorld(new learn());
             

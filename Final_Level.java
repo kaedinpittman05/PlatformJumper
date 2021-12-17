@@ -17,12 +17,7 @@ public class Final_Level extends MyWorld
     {
         setBackground("beach.jpg");
         
-        addObject(new Ship(), 538, 241);
         
-        
-        
-        Pirate pirate = new Pirate();
-         addObject(pirate, 40, 344);
          
          
          
@@ -39,5 +34,12 @@ public class Final_Level extends MyWorld
          addObject(new Platform(), 308, 280);
          
          addObject(new Platform(), 394, 247);
+         
+         addObject(new Ship(), 538, 241);
+        
+        
+        
+        Pirate pirate = new Pirate();
+         addObject(pirate, 40, 344);
     }
 }

@@ -17,14 +17,7 @@ public class level_zero extends MyWorld
     {
         setBackground("beach.jpg");
         
-        rum = new Rum();
-        addObject (rum, 589,150);
         
-         Pirate pirate = new Pirate();
-         addObject(pirate, 40, 344);
-         
-         Fish fish = new Fish();
-         addObject(fish, 599,255);
         Platform platform = new Platform();
          addObject(platform, 23,390);
          
@@ -50,5 +43,14 @@ public class level_zero extends MyWorld
          addObject(new Platform(), 568, 184);
          
          addObject(new Platform(), 587, 184);
+         
+         rum = new Rum();
+        addObject (rum, 589,150);
+        
+         Pirate pirate = new Pirate();
+         addObject(pirate, 40, 344);
+         
+         Fish fish = new Fish();
+         addObject(fish, 599,255);
     }
 }
