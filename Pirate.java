@@ -144,6 +144,7 @@ public class Pirate extends Actor
         else if(isTouching(Crab.class) && remove == 1)
         {
             removeTouching(Crab.class);
+            Greenfoot.playSound("Explosion.wav");
             remove--;
         }
         else if(isTouching(Fish.class) && remove != 1)

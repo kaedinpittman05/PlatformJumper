@@ -49,7 +49,7 @@ public class learn extends MyWorld
          
          addObject(new Platform(), 581,390);
          
-         addObject(new Bomb(),133,352);
+         addObject(new Bomb(),199,356);
         
         addObject(new Crab(),413,357);
         
