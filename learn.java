@@ -17,12 +17,7 @@ public class learn extends MyWorld
     {
         setBackground("beach.jpg");
         
-        addObject(new Bomb(),133,352);
         
-        addObject(new Crab(),413,357);
-        
-        Pirate pirate = new Pirate();
-         addObject(pirate, 40, 344);
          
          addObject(new Bottle(),571,275);
         
@@ -53,5 +48,12 @@ public class learn extends MyWorld
          addObject(new Platform(), 533,390);
          
          addObject(new Platform(), 581,390);
+         
+         addObject(new Bomb(),133,352);
+        
+        addObject(new Crab(),413,357);
+        
+        Pirate pirate = new Pirate();
+         addObject(pirate, 40, 344);
     }
 }

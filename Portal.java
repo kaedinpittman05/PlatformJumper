@@ -43,7 +43,7 @@ public class Portal extends Goal
         if(goal == 1 && start == 1)
         {
             Greenfoot.setWorld(new Secret_level());
-            goal++;
+            
         }
         
     }

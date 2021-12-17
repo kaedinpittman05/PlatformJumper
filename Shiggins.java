@@ -42,7 +42,7 @@ public class Shiggins extends Goal
         if(goal == 1 && start == 1)
         {
             Greenfoot.setWorld(new The_End());
-            goal++;
+            
         }
         
     }
