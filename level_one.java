@@ -1,22 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class level_one here.
+ * Write a description of class Level_One here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class level_one extends MyWorld
+public class Level_One extends World
 {
-    private Rum rum;
-    private Keg keg;
+
     /**
-     * Constructor for objects of class level_one.
+     * Constructor for objects of class Level_One.
      * 
      */
-    public level_one()
-    {
-         
+    public Level_One()
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(600, 400, 1); 
         setBackground("beach.jpg");
         
         
@@ -78,14 +78,9 @@ public class level_one extends MyWorld
          Pirate pirate = new Pirate();
          addObject(pirate, 40, 344);
         
-        keg = new Keg();
-        addObject (keg, 9,154);
+        
+        addObject (new Keg(), 9,154);
         
         addObject(new Portal(),548,311);
-         
-         
-         
-         
-         
     }
 }

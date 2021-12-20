@@ -43,7 +43,7 @@ public class Bottle extends Goal
     {
          if(goal == 1 && start == 1)
         {
-            Greenfoot.setWorld(new level_one());
+            Greenfoot.setWorld(new Level_One());
             
         }
         

@@ -1,20 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class learn here.
+ * Write a description of class Learn here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class learn extends MyWorld
+public class Learn extends World
 {
 
     /**
-     * Constructor for objects of class learn.
+     * Constructor for objects of class Learn.
      * 
      */
-    public learn()
-    {
+    public Learn()
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(600, 400, 1); 
         setBackground("beach.jpg");
         
         

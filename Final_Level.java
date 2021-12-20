@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Final_Level extends MyWorld
+public class Final_Level extends World
 {
 
     /**
@@ -14,7 +14,15 @@ public class Final_Level extends MyWorld
      * 
      */
     public Final_Level()
-    {
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(600, 400, 1); 
+        /**
+     * Constructor for objects of class Final_Level.
+     * 
+     */
+    
+    
         setBackground("beach.jpg");
         
         
@@ -41,5 +49,6 @@ public class Final_Level extends MyWorld
         
         Pirate pirate = new Pirate();
          addObject(pirate, 40, 344);
+    
     }
 }

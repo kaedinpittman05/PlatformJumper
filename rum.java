@@ -43,7 +43,7 @@ public class Rum extends Goal
     {
         if(goal == 1 && start == 1)
         {
-            Greenfoot.setWorld(new learn());
+            Greenfoot.setWorld(new Learn());
             
         }
         

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Secret_level extends MyWorld
+public class Secret_level extends World
 {
 
     /**
@@ -14,7 +14,9 @@ public class Secret_level extends MyWorld
      * 
      */
     public Secret_level()
-    {
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(600, 400, 1); 
         setBackground("beach.jpg");
         
         
@@ -63,7 +65,5 @@ public class Secret_level extends MyWorld
          addObject(new Bomb(),271,137);
          
          addObject(new Crab(),351,356);
-         
-         
     }
 }
